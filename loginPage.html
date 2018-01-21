@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="myApp" >
+
+<head>
+    <title>Log in</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="bootstrap.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+   
+   <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="node_modules/ngstorage/ngStorage.min.js"></script>
+    <script src="node_modules/angular-utils-pagination/dirPagination.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="style/styling.css">
+    <script src="script/scripts.js"></script>
+
+</head>
+    <body>
+        <div class="container-fluid" ng-controller="myController">
+            
+            <div class="row">
+                <div class="col-md-12">
+<form name="myForm" novalidate>
+  
+  <h1>Documentum</h1>
+  <input class="user" type="text" placeholder="username" name="userName" ng-model="credentials.User" required/>
+    <div ng-messages="myForm.userName.$error">
+    
+                                        <div ng-message="required" ng-show="myForm.userName.$touched"><span class="span-text">Please Provide Username </span></div></div>
+                        
+    
+  <input class="pass" type="password" placeholder="password" name="password" ng-model="credentials.Password" required/>
+    <div ng-messages="myForm.password.$error">
+    
+                                        <div ng-message="required" ng-show="myForm.password.$touched"> <span class="span-text">Please Provide Password </span></div></div>
+                          
+                        
+            
+    <div class="row">
+                                
+        <div class="col-md-1"></div>
+        <div class="col-md-10 form-group">
+                                    <select name="language" class="form-control">
+                                    <option value="full time">English(United States)</option>
+                                    <option value="voluntary">French</option>
+                                    <option value="self">Polish</option>
+                                </select></div>
+        
+        <div class="col-md-1"></div>
+                           
+                        </div>
+    
+ 
+  <input class="btn"  type="submit" value="SIGN IN" ng-click="signIn()" ng-disabled="myForm.$invalid"/>
+  
+
+</form>
+        </div>
+            </div>
+            </div>
+        </body>
+</html>

@@ -1,0 +1,134 @@
+<div class="container-fluid">
+     <form>
+    <div class="row" style="margin-top: 15px;">
+        <div class="col-md-3 col-xs-6" style="padding-right:0px;">
+            <input  class="radiobutton" type="radio" name="editList" id="task" value="task"/>
+<label class="label-modified">My Task</label>
+
+<input  class="radiobutton" type="radio" name="editList" id="work" value="work"/>
+<label class="label-modified">Workqueue</label>
+          </div>
+       
+        <div class="col-md-2 col-xs-6  dropdown" style="padding-left:0px;">
+            <select name="ni" class="form-control">
+                                    <option value="">NI-Processing</option>
+                                    <option value="">NI-EBE</option>
+                                    <option value="">NI-Dispatching</option>   
+                                    
+                                </select>
+            
+        </div>
+        <div class="col-md-2 col-xs-1"></div>
+        <div class="col-md-1 col-xs-2"><i class="fa fa-upload pull-right text-center" style="font-size:24px"><br><h6 >Import</h6></i></div>
+        <div class="col-md-1 col-xs-2"><i class="fa fa-download pull-right text-center" style="font-size:24px"><br><h6>Download</h6></i></div>
+        <div class="col-md-1 col-xs-2"><i class="fa fa-server pull-right text-center" style="font-size:24px"><br><h6>Show URL</h6></i></div>
+        <div class="col-md-1 col-xs-2"><i class="fa fa-check-square pull-right text-center" style="font-size:24px"><br><h6>Show Filter</h6></i></div>
+        <div class="col-md-1 col-xs-2"><i class="fa fa-user pull-right text-center" style="font-size:24px"><br><h6>Preference</h6></i></div>
+           <div class="col-xs-1"></div> 
+      
+         </div>
+         <div class="row" style="margin-top: 5px;">
+             
+             <div class="col-md-6 col-xs-12">
+                <div class="row">
+                    <div class="col-md-1 hidden-xs list-modified-2 "><a ui-sref="#"><i class="fa fa-laptop" style="font-size:24px;padding-left:3px;"></i><br>View</a></div>
+            <div class="col-md-1 hidden-xs list-modified-2"><a ui-sref="#"><i class="fa fa-pencil-square-o" style="font-size:24px;"></i><br>Edit</a></div>
+        <div class="col-md-1 hidden-xs list-modified-2" style="margin-left:-11px;"><a ui-sref="#"><i class="fa fa-address-book" style="font-size:24px;padding-left:8px;"></i><br>History</a></div>
+                     <div class="col-md-1 hidden-xs list-modified-2"><a ui-sref="#"><i class="fa fa-pause" style="font-size:24px;padding-left:4px;"></i><br>Hold</a></div>
+                     <div class="col-md-1 hidden-xs list-modified-2"><a ui-sref="#"><i class="fa fa-archive" style="font-size:24px;padding-left:3px;"></i><br>Store</a></div>
+            <div class="col-md-1 hidden-xs list-modified-2"><a ui-sref="#"><i class="fa fa-trash" style="font-size:24px;padding-left:5px;"></i><br>Trash</a></div>
+                     <div class="col-md-1 hidden-xs list-modified-2"><a ui-sref="#"><i class="fa fa-user" style="font-size:24px;padding-left:9px;"></i><br>Assign</a></div>
+                <div class="col-md-1 hidden-xs list-modified-2"><a ui-sref="#"><i class="fa fa-user-times " style="font-size:25px;padding-left:12px;"></i><br>Unassign</a></div>
+                <div class="col-md-4"></div>
+     <!--<div class="col-md-1 list-modified-2"><a ui-sref="#"><i class="fa fa-envelope" style="font-size:24px"></i><br>Dispatch</a></div>-->
+                 </div>
+                 
+                 <div class="col-xs-3 visible-xs text-center">
+                 
+                     <a ui-sref="#" class="text-center"><i class="fa fa-laptop" style="font-size:24px;"></i><br>View</a>
+                 
+                 </div> 
+                  <div class="col-xs-3 visible-xs text-center">
+                 <a ui-sref="#"><i class="fa fa-pencil-square-o" style="font-size:24px;"></i><br>Edit</a>
+                 </div>
+                  <div class="col-xs-3 visible-xs text-center">
+                 <a ui-sref="#"><i class="fa fa-address-book" style="font-size:24px;"></i><br>History</a></div>
+                 
+                  <div class="col-xs-3 visible-xs text-center">
+                 <a ui-sref="#"><i class="fa fa-pause" style="font-size:24px;padding-left:4px;"></i><br>Hold</a>
+                 </div> 
+                 <div class="col-xs-3 visible-xs text-center">
+                                      <a ui-sref="#"><i class="fa fa-archive" style="font-size:24px;"></i><br>Store</a></div>
+                      <div class="col-xs-3 visible-xs text-center">
+                 <a ui-sref="#"><i class="fa fa-trash" style="font-size:24px;"></i><br>Trash</a></div>
+
+                 
+                  <div class="col-xs-3 visible-xs text-center">
+                 <a ui-sref="#" ><i class="fa fa-user " style="font-size:24px;"></i><br> Assign</a>
+                 </div>
+                  <div class="col-xs-3 visible-xs text-center">
+                 <a ui-sref="#"><i class="fa fa-user-times " style="font-size:24px;"></i><br>Unassign</a></div>
+                 
+                 <br class="visible-xs">
+                 
+                 
+             </div>
+             <div class="col-md-3"></div>
+             <div class="col-xs-12 visible-xs" style="margin-top:10px;"></div>
+             <div class="col-md-2 col-xs-10" style="padding-right:0px">
+                 <form class="navbar-form navbar-left navbar-form">
+                <div class="input-group ">
+                    <input type="text" ng-model="search"class="form-control pull-right" placeholder="Search" style="height:38px;">
+                    <div class="input-group-btn search">
+                        <button class="btn btn-default btn-search pull-right" type="submit" style="height: 38px;
+    width: 48px;">
+           <i class="fa fa-search"></i>
+          </button>
+                    </div>
+                 </div></form>
+             </div>
+             <div class="col-md-1 col-xs-2"><button class="btn btn-default btn-search pull-right" type="submit" style="height: 38px;
+    margin-right: 14px;"><i class="fa fa-refresh" style="font-size:24px"></i></button></div>
+         </div>
+         <div class="row" style="margin-top: 20px;">
+                        <div class="col-md-12 table-responsive table1" >
+                  <table class="table table-bordered">
+    <thead>
+      <tr class="info table-heading">
+        <th></th>
+        <th></th>
+        <th ng-click="sort('Status')">Status <span class="fa " ng-show="sortKey=='Status'"  ng-class="{'fa-sort-asc':reverse,'fa-sort-desc':!reverse}"></span></th>
+          <th ng-click="sort('Provider')">Provider<span class="fa " ng-show="sortKey=='Provider'" ng-class="{'fa-sort-asc':reverse,'fa-sort-desc':!reversa}"></span></th>
+          <th>Reception Date</th>
+          <th ng-click="sort('Subject')">Subject<span class="fa " ng-show="sortKey=='Subject'"  ng-class="{'fa-sort-asc':reverse,'fa-sort-desc':!reverse}"></span> </th>
+          <th>From Inbox</th>
+          <th>Receiver</th>
+          <th>Current User</th>
+          <th>Comment</th>
+      </tr>
+    </thead>
+                      <tbody>
+                          <tr dir-paginate="data in table | itemsPerPage: 10 |orderBy:sortKey:reverse | filter:search"  ng-class="$index%2==0 ? 'backgroundcolor2' : 'backgroundcolor1'">
+                              <td><i class="fa fa-edit"></i></td>
+                              <td>1</td>
+                              <td>{{data.Status}}</td>
+                              <td>{{data.Provider}}</td>
+                              <td>{{data.Reception_Date}}</td>
+                              <td>{{data.Subject}}</td>
+                              <td>{{data.From_Inbox}}</td>
+                              <td>{{data.Receiver}}</td>
+                              <td>{{data.Current_User}}</td>
+                              <td>{{data.Comment}}</td>
+                          </tr>
+                          
+                      </tbody>
+                            </table>
+                            <dir-pagination-controls 
+			boundary-links="true" 
+			direction-links="true" >
+			</dir-pagination-controls>
+
+             </div>
+         </div>
+         </form>
+</div>
